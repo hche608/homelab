@@ -19,13 +19,13 @@ What is home lab?
 * [Equipment](hardware/equipments.md)<a name="equipments"></a>
 
 ## Operating System <a name="operating_system"></a>
-* ### Linux
+* ### MacOS
   * [MacOS](os/macos.md)<a name="macos"></a>
+* ### Linux
   * [Common](os/linux/common.md)<a name="common"></a>
   * [Debian](os/linux/debian.md)<a name="debian"></a>
   * [PhotonOS](os/linux/photon.md)<a name="photonos"></a>
-
-
+  
 ## Software <a name="software"></a>
 * [Docker](software/docker.md)<a name="docker"></a>
 * [SmartDNS](software/smartdns.md)<a name="smartdns"></a>
