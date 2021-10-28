@@ -1,3 +1,5 @@
+[:house_with_garden: home](../index.md)
+
 Equipments
 ---
 * Ubiquiti UniFi UAP-AC-LR Dual-band AC1350 (450+867Mbps) [Long Range](https://store.ui.com/products/unifi-ac-lr)
