@@ -4,6 +4,7 @@ Linux
 -
 
 1. how to set up ssh keys [:door:](https://linuxize.com/post/how-to-set-up-ssh-keys-on-debian-10/)
+
 ```shell
 # setup user login over ssh
 mkdir -p ~/.ssh
@@ -32,6 +33,7 @@ useradd -m -G sudo <username> # (-m creates the home directory /home/user; -G ad
 passwd <username>
 ```
 3. sudo without password [:door:](https://bingozb.github.io/views/default/58.html#%E8%A7%A3%E5%86%B3)
+
 ```shell
 sudo su -
 echo "`whoami`     ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/sudoers
