@@ -26,6 +26,7 @@ Linux
     ```
 
 2. add a new user
+
     ```shell
     # Then add a new user that will be able to use sudo.
     useradd -m -G sudo <username> # (-m creates the home directory /home/user; -G adds the user to the sudoers group)
