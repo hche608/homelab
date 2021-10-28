@@ -1,4 +1,4 @@
-[:house_with_garden: home](../index.md)
+[:house_with_garden:](../index.md)
 
 Equipments
 ---
