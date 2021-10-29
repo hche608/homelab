@@ -307,5 +307,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Personal
+resources/jupiter/data/
+!resources/jupiter/data/placeholder
 .env
 .env.leave

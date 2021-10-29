@@ -1,0 +1,27 @@
+version: "3.3"
+services:
+  jupyter-lab:
+    container_name: akdocker
+    restart: always
+    ports:
+      - "8888:8888"
+    volumes:
+      - "./data:/home/"
+      - "./font/Microsoft Sans Serif.ttf:/usr/local/lib/python3.8/site-packages/matplotlib/mpl-data/fonts/Microsoft Sans Serif.ttf"
+    image: registry.cn-hangzhou.aliyuncs.com/akshare/akdocker
+    command: 'jupyter-lab --allow-root --no-browser --ip=0.0.0.0'
+    hostname: "akdocker"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.akdocker.entrypoints=websecure"
+      - "traefik.http.routers.akdocker.rule=Host(`akdocker.thsiis.me`)"
+      - "traefik.http.routers.akdocker.tls=true"
+      - "traefik.http.routers.akdocker.tls.certresolver=production"
+      - "traefik.http.routers.akdocker.middlewares=test-auth"
+      - "traefik.http.middlewares.test-auth.basicauth.usersfile=/users_credentials"
+      - "traefik.http.middlewares.test-auth.basicauth.removeheader=true"
+
+networks:
+  default:
+    external:
+      name: traefik_net
