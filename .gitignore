@@ -309,6 +309,7 @@ yarn-error.log*
 # Personal
 resources/jupiter/data/
 resources/heimdall/config/
+resources/portainer/data/
 !resources/jupiter/data/placeholder
 .env
 .env.leave

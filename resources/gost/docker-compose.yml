@@ -1,0 +1,74 @@
+version: "3"
+services:
+  gost-qbittorrent:
+    image: ginuerzh/gost
+    container_name: gost-qbittorrent
+    restart: always
+    ports:
+      - "9080:9080"
+    command:
+      - "-L=tcp://:9080/192.168.6.5:9080"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    hostname: "gost-qbittorrent"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gost-qbittorrent.entrypoints=websecure"
+      - "traefik.http.routers.gost-qbittorrent.rule=Host(`qb.n.thsiis.me`)"
+      - "traefik.http.routers.gost-qbittorrent.tls=true"
+      - "traefik.http.routers.gost-qbittorrent.tls.certresolver=production"
+      # authelia
+      - "traefik.http.routers.gost-qbittorrent.middlewares=authelia"
+
+  gost-zfile:
+    image: ginuerzh/gost
+    container_name: gost-zfile
+    restart: always
+    ports:
+      - "9081:9081"
+    command:
+      - "-L=tcp://:9081/192.168.6.5:8080"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    hostname: "gost-zfile"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gost-zfile.entrypoints=websecure"
+      - "traefik.http.routers.gost-zfile.rule=Host(`zfile.n.thsiis.me`)"
+      - "traefik.http.routers.gost-zfile.tls=true"
+      - "traefik.http.routers.gost-zfile.tls.certresolver=production"
+      # authelia
+      - "traefik.http.routers.gost-zfile.middlewares=authelia"
+
+  gost-m920q:
+    image: ginuerzh/gost
+    container_name: gost-m920q
+    restart: always
+    ports:
+      - "9082:9082"
+    command:
+      - "-L=tcp://:9082/192.168.6.6:443"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    hostname: "gost-m920q"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gost-m920q.entrypoints=websecure"
+      - "traefik.http.routers.gost-m920q.rule=Host(`m920q.n.thsiis.me`)"
+      - "traefik.http.routers.gost-m920q.tls=true"
+      - "traefik.http.routers.gost-m920q.tls.certresolver=production"
+      - "traefik.http.routers.gost-m920q.service=gost-m920q-service"
+      - "traefik.http.services.gost-m920q-service.loadbalancer.server.scheme=https"
+      # authelia
+      - "traefik.http.routers.gost-m920q.middlewares=authelia"
+
+networks:
+  default:
+    external:
+      name: traefik_net

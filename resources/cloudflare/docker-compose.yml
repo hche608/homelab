@@ -1,0 +1,12 @@
+version: "3"
+services:
+  cloudflare-ddns:
+    image: oznu/cloudflare-ddns:latest
+    restart: always
+    container_name: cloudflare-ddns
+    environment:
+      - "API_KEY=<token>"
+      - "ZONE=thsiis.me"
+      - "SUBDOMAIN=n"
+      - "PROXIED=false"
+      - "TZ=Pacific/Auckland"
