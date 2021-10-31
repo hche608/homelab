@@ -1,0 +1,17 @@
+---
+###############################################################
+#                         Users Database                      #
+###############################################################
+
+# This file can be used if you do not have an LDAP set up.
+
+# List of users
+users:
+  hche608:
+    displayname: "Hao Chen"
+    # Password is Authelia
+    password: "$argon2id$v=19$m=65536,t=1,p=8$Q2JIdWcrcDZWcWROb2d1Yw$YoktgeYEjbdSz3aMHiQ0y27fIj/stEX56w2I5CuZgKU" 
+    email: hao.ch86@gmail.com
+    groups:
+      - admins
+      - dev
