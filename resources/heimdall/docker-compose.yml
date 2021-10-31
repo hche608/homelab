@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  heimdall:
+    image: ghcr.io/linuxserver/heimdall
+    container_name: heimdall
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Pacific/Auckland
+    volumes:
+      - ./config:/config
+    ports:
+      - 8500:80
+      # - 8600:443
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.heimdall.entrypoints=websecure"
+      - "traefik.http.routers.heimdall.rule=Host(`heimdall.n.thsiis.me`)"
+      - "traefik.http.routers.heimdall.tls=true"
+      - "traefik.http.routers.heimdall.tls.certresolver=production"
+      - "traefik.http.routers.heimdall.service=heimdall"
+      # authelia
+      - "traefik.http.routers.heimdall.middlewares=authelia"
+      - "traefik.http.services.heimdall.loadbalancer.server.port=80"
+
+networks:
+  default:
+    external:
+      name: traefik_net
