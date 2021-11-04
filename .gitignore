@@ -310,6 +310,7 @@ yarn-error.log*
 resources/jupiter/data/
 resources/heimdall/config/
 resources/portainer/data/
+resources/authelia/config/db.sqlite3
 !resources/jupiter/data/placeholder
 .env
 .env.leave

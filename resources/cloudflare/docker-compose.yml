@@ -4,9 +4,7 @@ services:
     image: oznu/cloudflare-ddns:latest
     restart: always
     container_name: cloudflare-ddns
+    env_file: .env
     environment:
-      - "API_KEY=<token>"
-      - "ZONE=thsiis.me"
-      - "SUBDOMAIN=n"
       - "PROXIED=false"
       - "TZ=Pacific/Auckland"
