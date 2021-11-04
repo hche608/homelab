@@ -33,7 +33,7 @@ access_control:
   default_policy: two_factor
   rules:
     # Rules applied to everyone
-    - domain: whoami.n.thsiis.me
+    - domain: whoami.thsiis.me
       policy: bypass
 
 session:

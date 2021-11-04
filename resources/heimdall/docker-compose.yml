@@ -19,7 +19,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.heimdall.entrypoints=websecure"
-      - "traefik.http.routers.heimdall.rule=Host(`heimdall.n.thsiis.me`)"
+      - "traefik.http.routers.heimdall.rule=Host(`heimdall.thsiis.me`)"
       - "traefik.http.routers.heimdall.tls=true"
       - "traefik.http.routers.heimdall.tls.certresolver=production"
       #- "traefik.http.routers.heimdall.service=heimdall"

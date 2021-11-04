@@ -16,7 +16,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.gost-qbittorrent.entrypoints=websecure"
-      - "traefik.http.routers.gost-qbittorrent.rule=Host(`qb.n.thsiis.me`)"
+      - "traefik.http.routers.gost-qbittorrent.rule=Host(`qb.thsiis.me`)"
       - "traefik.http.routers.gost-qbittorrent.tls=true"
       - "traefik.http.routers.gost-qbittorrent.tls.certresolver=production"
       # authelia
@@ -38,7 +38,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.gost-zfile.entrypoints=websecure"
-      - "traefik.http.routers.gost-zfile.rule=Host(`zfile.n.thsiis.me`)"
+      - "traefik.http.routers.gost-zfile.rule=Host(`zfile.thsiis.me`)"
       - "traefik.http.routers.gost-zfile.tls=true"
       - "traefik.http.routers.gost-zfile.tls.certresolver=production"
       # authelia
@@ -60,7 +60,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.gost-m920q.entrypoints=websecure"
-      - "traefik.http.routers.gost-m920q.rule=Host(`m920q.n.thsiis.me`)"
+      - "traefik.http.routers.gost-m920q.rule=Host(`m920q.thsiis.me`)"
       - "traefik.http.routers.gost-m920q.tls=true"
       - "traefik.http.routers.gost-m920q.tls.certresolver=production"
       - "traefik.http.routers.gost-m920q.service=gost-m920q-service"

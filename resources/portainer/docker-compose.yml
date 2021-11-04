@@ -16,7 +16,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.portainer.entrypoints=websecure"
-      - "traefik.http.routers.portainer.rule=Host(`portainer.n.thsiis.me`)"
+      - "traefik.http.routers.portainer.rule=Host(`portainer.thsiis.me`)"
       - "traefik.http.routers.portainer.tls=true"
       - "traefik.http.routers.portainer.tls.certresolver=production"
       - "traefik.http.routers.portainer.service=portainer"

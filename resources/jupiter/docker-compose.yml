@@ -14,7 +14,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.akdocker.entrypoints=websecure"
-      - "traefik.http.routers.akdocker.rule=Host(`akdocker.n.thsiis.me`)"
+      - "traefik.http.routers.akdocker.rule=Host(`akdocker.thsiis.me`)"
       - "traefik.http.routers.akdocker.tls=true"
       - "traefik.http.routers.akdocker.tls.certresolver=production"
       # authelia

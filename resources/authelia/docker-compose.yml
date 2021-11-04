@@ -10,11 +10,11 @@ services:
       - "9091:9091"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.authelia.rule=Host(`auth.n.thsiis.me`)"
+      - "traefik.http.routers.authelia.rule=Host(`auth.thsiis.me`)"
       - "traefik.http.routers.authelia.entrypoints=websecure"
       - "traefik.http.routers.authelia.tls=true"
       - "traefik.http.routers.authelia.tls.certresolver=production"      
-      - "traefik.http.middlewares.authelia.forwardauth.address=http://authelia:9091/api/verify?rd=https://auth.n.thsiis.me"
+      - "traefik.http.middlewares.authelia.forwardauth.address=http://authelia:9091/api/verify?rd=https://auth.thsiis.me"
       - "traefik.http.middlewares.authelia.forwardauth.trustForwardHeader=true"
       - "traefik.http.middlewares.authelia.forwardauth.authResponseHeaders=Remote-User,Remote-Groups,Remote-Name,Remote-Email"
     restart: unless-stopped
