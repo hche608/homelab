@@ -19,6 +19,8 @@ services:
       - "traefik.http.middlewares.authelia.forwardauth.authResponseHeaders=Remote-User,Remote-Groups,Remote-Name,Remote-Email"
     restart: unless-stopped
     environment:
+      - PUID=1000
+      - PGID=100
       - TZ=Pacific/Auckland
     healthcheck:
       disable: true
