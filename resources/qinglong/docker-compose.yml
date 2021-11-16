@@ -1,0 +1,32 @@
+version: "3"
+services:
+  qinglong:
+    container_name: qinglong
+    restart: always
+    image: whyour/qinglong:latest
+    volumes:
+      - "./data/config:/ql/config"
+      - "./data/log:/ql/log"
+      - "./data/db:/ql/db"
+      - "./data/scripts:/ql/scripts"
+      - "./data/repo:/ql/repo"
+    ports:
+      - "5700:5700"
+    environment:
+      - "ENABLE_HANGUP=true"
+      - "ENABLE_WEB_PANEL=true"
+      - "TZ=Pacific/Auckland"
+    hostname: "qinglong"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.qinglong.entrypoints=websecure"
+      - "traefik.http.routers.qinglong.rule=Host(`qinglong.thsiis.me`)"
+      - "traefik.http.routers.qinglong.tls=true"
+      - "traefik.http.routers.qinglong.tls.certresolver=production"
+      # authelia
+      - "traefik.http.routers.qinglong.middlewares=authelia"
+
+networks:
+  default:
+    external:
+      name: traefik_net

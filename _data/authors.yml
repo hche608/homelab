@@ -1,0 +1,11 @@
+# Sample Authors
+# Remove file or replace with your own
+
+Hao Chen:
+  name: Hao Chen
+#  picture: /images/bio-photo-2.jpg
+  twitter: "@blackhole"
+  links:
+    - title: Twitter
+      url: https://twitter.com/blackhole
+      icon: fab fa-twitter-square
