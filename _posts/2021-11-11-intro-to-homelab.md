@@ -9,10 +9,10 @@ tags:
   - docker
 last_modified_at: 2021-11-12T00:00:00+12:00
 ---
-## Hardware <a name="hardware"></a>
+## Hardware
 * [Equipment](homelab-hardware.html)
 
-## Operating System <a name="operating_system"></a>
+## Operating System
 * ### MacOS
   * [MacOS](../12/macos.html)
 * ### Linux
@@ -20,10 +20,10 @@ last_modified_at: 2021-11-12T00:00:00+12:00
   * [Debian](../12/debian.html)
   * [PhotonOS](../12/photon.html)
 
-## Software <a name="software"></a>
-* [Docker](software/docker.md)
-* [SmartDNS](software/smartdns.md)
-* [AdGuardHome](software/adguardhome.md)
+## Software
+* [Docker](../13/docker.html)
+* [SmartDNS](../13/smartdns.html)
+* [AdGuardHome](../13/adguardhome.html)
 
-# Tools <a name="tools"></a>
+# Tools
 * [Composerize :door:](https://8gwifi.org/dc1.jsp)
