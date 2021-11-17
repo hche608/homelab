@@ -7,18 +7,18 @@ tags:
   - homelab
   - linux
   - docker
-last_modified_at: 2021-11-11T00:00:00+12:00
+last_modified_at: 2021-11-12T00:00:00+12:00
 ---
 ## Hardware <a name="hardware"></a>
 * [Equipment](homelab-hardware.html)
 
 ## Operating System <a name="operating_system"></a>
 * ### MacOS
-  * [MacOS](os/macos.md)
+  * [MacOS](../12/macos.html)
 * ### Linux
-  * [Common](os/linux/common.md)
-  * [Debian](os/linux/debian.md)
-  * [PhotonOS](os/linux/photon.md)
+  * [Common](../12/linux.html)
+  * [Debian](../12/debian.html)
+  * [PhotonOS](../12/photon.html)
 
 ## Software <a name="software"></a>
 * [Docker](software/docker.md)
