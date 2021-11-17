@@ -13,7 +13,7 @@ last_modified_at: 2021-11-11T00:00:00+12:00
 What is home lab?
 
 ## Hardware <a name="hardware"></a>
-* [Equipment](hardware/equipments.md) <a name="equipments"></a>
+* [Equipment](homelab-hardware.html) <a name="equipments"></a>
 
 ## Operating System <a name="operating_system"></a>
 * ### MacOS
