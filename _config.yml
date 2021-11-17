@@ -105,6 +105,22 @@ defaults:
       comments: true
       share: true
 
+# Site Author
+author:
+  name: Hao Chen
+  #  picture: /images/bio-photo-2.jpg
+  twitter: "@blackhole"
+  links:
+    - title: Twitter
+      url: https://twitter.com/blackhole
+      icon: fab fa-twitter-square
+    - title: Instagram
+      url: https://instagram.com/blackhole
+      icon: fab fa-instagram
+    - title: GitHub
+      url: https://github.com/blackhole
+      icon: fab fa-github-square
+
 # Footer Links
 footer_links:
   - title: Twitter
