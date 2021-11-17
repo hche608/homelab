@@ -1,7 +1,5 @@
 # Sample site navigation bar links
 
-- title: Home
-  url: /
 - title: Posts
   url: /posts/
 - title: Categories
