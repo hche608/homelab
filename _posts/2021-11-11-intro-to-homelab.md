@@ -1,34 +1,16 @@
 ---
-title: "Markup: Title *with* **Markdown**"
+title: "How do I set up my homelab"
 categories:
   - Markdown
+  - Homelab
 tags:
-  - css
-  - html
-  - title 
-last_modified_at: 2021-11-17T13:27:00+12:00
+  - homelab
+  - linux
+  - docker
+last_modified_at: 2021-11-11T00:00:00+12:00
 ---
-
-# Table of contents
-1. [Introduction](#introduction)
-2. [Hardware](#hardware)
-  1. [Equipment](#equipments)
-3. [Operating System](#operating_system)
-  1. [MacOS](#macos)
-  2. [Common](#common)
-  3. [Debian](#debian)
-  4. [PhotonOS](#photonos)
-4. [Software](#software)
-  1. [Docker](#docker)
-  2. [SmartDNS](#smartdns)
-  3. [AdGuardHome](#adguardhome)
-5. [Tools](#tools)
-  1. [Composerize](#composerize)
-
 ## This is the introduction <a name="introduction"></a>
 What is home lab?
-
-
 
 ## Hardware <a name="hardware"></a>
 * [Equipment](hardware/equipments.md) <a name="equipments"></a>
