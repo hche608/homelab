@@ -29,8 +29,8 @@ services:
       - "traefik.http.routers.qinglong.tls.certresolver=production"
       # authelia
       - "traefik.http.routers.qinglong.middlewares=authelia"
-#
-#networks:
-#  default:
-#    external:
-#      name: traefik_net
+
+networks:
+  default:
+    external:
+      name: traefik_net
