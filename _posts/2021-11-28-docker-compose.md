@@ -25,5 +25,5 @@ Docker Compose
 | qinglong             | application   | Active     |[portal](https://github.com/hche608/homelab/tree/master/resources/qinglong) |
 | whoami               | application   | Active     |[portal](https://github.com/hche608/homelab/tree/master/resources/whoami) |
 |=====
-| Foot1   | Foot2   | Foot3 |
+| Foot1   | Foot2   | Foot3 | Foot4 |
 {: rules="groups"}
