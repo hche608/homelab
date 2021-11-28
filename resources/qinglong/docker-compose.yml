@@ -10,8 +10,12 @@ services:
       - "./data/db:/ql/db"
       - "./data/scripts:/ql/scripts"
       - "./data/repo:/ql/repo"
+      - "./data/raw:/ql/raw"
+      - "./data/jbot:/ql/jbot"
+      - "./data/ninja:/ql/ninja"
     ports:
       - "5700:5700"
+      - "5701:5701"
     environment:
       - "ENABLE_HANGUP=true"
       - "ENABLE_WEB_PANEL=true"
@@ -25,8 +29,8 @@ services:
       - "traefik.http.routers.qinglong.tls.certresolver=production"
       # authelia
       - "traefik.http.routers.qinglong.middlewares=authelia"
-
-networks:
-  default:
-    external:
-      name: traefik_net
+#
+#networks:
+#  default:
+#    external:
+#      name: traefik_net
