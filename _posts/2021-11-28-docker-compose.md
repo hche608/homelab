@@ -16,7 +16,7 @@ Docker Compose
 
 | Name                 | Purpose | Status     | Link |
 |:---------------------|:-------:|-----------:|--------:|
-| authelia             | SSO     | Active     |{{ '/resources/authelia/' | absolute_url  }} |
+| authelia             | SSO     | Active     |[portal]({{ '/resources/authelia/' | absolute_url  }}) |
 | cloudflare           | DDNS   | cell6   ||
 | gost                 | proxy   | cell3   ||
 | heimdall             | cell5   | cell6   ||
