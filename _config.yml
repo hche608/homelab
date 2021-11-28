@@ -118,7 +118,7 @@ author:
       url: https://instagram.com/blackhole
       icon: fab fa-instagram
     - title: GitHub
-      url: https://github.com/blackhole
+      url: https://github.com/hche608
       icon: fab fa-github-square
 
 # Footer Links
@@ -130,7 +130,7 @@ footer_links:
     url: https://instagram.com/blackhole
     icon: fab fa-instagram
   - title: GitHub
-    url: https://github.com/blackhole
+    url: https://github.com/hche608
     icon: fab fa-github-square
   - title: Feed
     url: atom.xml
