@@ -9,7 +9,7 @@ log_level: debug
 theme: dark
 # This secret can also be set using the env variables AUTHELIA_JWT_SECRET_FILE
 jwt_secret: a_very_important_secret
-default_redirection_url: https://auth.n.thsiis.me
+default_redirection_url: https://auth.thsiis.me
 totp:
   issuer: authelia.com
 
