@@ -312,6 +312,7 @@ resources/heimdall/config/
 resources/portainer/data/
 resources/qinglong/data/
 resources/authelia/config/db.sqlite3
+resources/authelia/config/notification.txt
 !resources/jupiter/data/placeholder
 .env
 .env.leave
