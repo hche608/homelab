@@ -313,6 +313,7 @@ resources/portainer/data/
 resources/qinglong/data/
 resources/authelia/config/db.sqlite3
 resources/authelia/config/notification.txt
+resources/authelia/config/users_database.yml
 !resources/jupiter/data/placeholder
 .env
 .env.leave
