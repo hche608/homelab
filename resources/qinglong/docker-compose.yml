@@ -5,14 +5,7 @@ services:
     restart: always
     image: whyour/qinglong:latest
     volumes:
-      - "./data/config:/ql/config"
-      - "./data/log:/ql/log"
-      - "./data/db:/ql/db"
-      - "./data/scripts:/ql/scripts"
-      - "./data/repo:/ql/repo"
-      - "./data/raw:/ql/raw"
-      - "./data/jbot:/ql/jbot"
-      - "./data/ninja:/ql/ninja"
+      - "./data:/ql/data"
     ports:
       - "5700:5700"
       - "5701:5701"
