@@ -3,7 +3,7 @@ services:
   qinglong:
     container_name: qinglong
     restart: always
-    image: whyour/qinglong:latest
+    image: whyour/qinglong:2.13.8
     volumes:
       - "./data:/ql/data"
     ports:

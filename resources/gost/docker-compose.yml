@@ -7,7 +7,7 @@ services:
     ports:
       - "9080:9080"
     command:
-      - "-L=tcp://:9080/192.168.6.5:9080"
+      - "-L=tcp://:9080/192.168.192.4:8082"
     logging:
       options:
         max-size: "10m"
@@ -29,7 +29,7 @@ services:
     ports:
       - "9081:9081"
     command:
-      - "-L=tcp://:9081/192.168.6.5:8080"
+      - "-L=tcp://:9081/192.168.192.4:8080"
     logging:
       options:
         max-size: "10m"
@@ -44,29 +44,51 @@ services:
       # authelia
       - "traefik.http.routers.gost-zfile.middlewares=authelia"
 
-  gost-m920q:
+  gost-hp800g2:
     image: ginuerzh/gost
-    container_name: gost-m920q
+    container_name: gost-hp800g2
     restart: always
     ports:
       - "9082:9082"
     command:
-      - "-L=tcp://:9082/192.168.6.6:443"
+      - "-L=tcp://:9082/192.168.192.250:443"
     logging:
       options:
         max-size: "10m"
         max-file: "3"
-    hostname: "gost-m920q"
+    hostname: "gost-hp800g2"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.gost-m920q.entrypoints=websecure"
-      - "traefik.http.routers.gost-m920q.rule=Host(`m920q.thsiis.me`)"
-      - "traefik.http.routers.gost-m920q.tls=true"
-      - "traefik.http.routers.gost-m920q.tls.certresolver=production"
-      - "traefik.http.routers.gost-m920q.service=gost-m920q-service"
-      - "traefik.http.services.gost-m920q-service.loadbalancer.server.scheme=https"
+      - "traefik.http.routers.gost-hp800g2.entrypoints=websecure"
+      - "traefik.http.routers.gost-hp800g2.rule=Host(`hp800g2.thsiis.me`)"
+      - "traefik.http.routers.gost-hp800g2.tls=true"
+      - "traefik.http.routers.gost-hp800g2.tls.certresolver=production"
+      - "traefik.http.routers.gost-hp800g2.service=gost-hp800g2-service"
+      - "traefik.http.services.gost-hp800g2-service.loadbalancer.server.scheme=https"
       # authelia
-      - "traefik.http.routers.gost-m920q.middlewares=authelia"
+      - "traefik.http.routers.gost-hp800g2.middlewares=authelia"
+
+  gost-smarthome:
+    image: ginuerzh/gost
+    container_name: gost-smarthome
+    restart: always
+    ports:
+      - "9083:9083"
+    command:
+      - "-L=tcp://:9083/192.168.192.5:8123"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    hostname: "gost-smarthome"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gost-smarthome.entrypoints=websecure"
+      - "traefik.http.routers.gost-smarthome.rule=Host(`smarthome.thsiis.me`)"
+      - "traefik.http.routers.gost-smarthome.tls=true"
+      - "traefik.http.routers.gost-smarthome.tls.certresolver=production"
+      # authelia
+      - "traefik.http.routers.gost-smarthome.middlewares=authelia"
 
 networks:
   default:

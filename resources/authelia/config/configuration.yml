@@ -220,6 +220,8 @@ access_control:
     ## Rules applied to everyone
     - domain: whoami.thsiis.me
       policy: bypass
+    - domain: smarthome.thsiis.me
+      policy: bypass
 
 ##
 ## Session Provider Configuration
