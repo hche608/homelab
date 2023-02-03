@@ -1,0 +1,15 @@
+version: '3'
+services:
+  homebridge:
+    image: oznu/homebridge:latest
+    restart: always
+    network_mode: host
+    environment:
+      - "TZ=Pacific/Auckland"    
+    volumes:
+      - ./homebridge:/homebridge
+    logging:
+      driver: json-file
+      options:
+        max-size: "10mb"
+        max-file: "1"
